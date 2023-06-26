@@ -1,17 +1,16 @@
-require("dotenv").config();
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect("mongodb://localhost/maithiligoal", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
 
 mongoose.connection.on("error", (err) => {
-  console.log("Mongoose Connection ERROR: " + err.message);
+  console.log("Connection error in Mongoose: " + err.message);
 });
 
 mongoose.connection.once("open", () => {
-  console.log("MongoDB Connected!");
+  console.log("Connection error in MongoDB");
 });
 
 require("./models/User");
