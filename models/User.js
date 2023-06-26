@@ -4,15 +4,15 @@ const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: "Name is required!",
+      required: "Please enter your Name",
     },
     email: {
       type: String,
-      required: "Email is required!",
+      required: "Please enter your Email Id",
     },
     password: {
       type: String,
-      required: "Password is required!",
+      required: "Please enter your Password",
     },
   },
   {
